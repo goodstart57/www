@@ -25,6 +25,7 @@ h1, h2, h3, h4{
     /*단축표기법*/
     background: url(images/bg_flower.png) no-repeat 50% 0,
                 linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%) repeat 0 0;
+    background-attachment: fixed; /*배경을 고정시킨다*/
     padding: 30px 0;
     /*height: 50vh;*/
 }
@@ -88,7 +89,7 @@ h1, h2, h3, h4{
     height: 10vh;
 }
 .footer-bg{
-     background: linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
+     background-image: linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
 }
 .footer{
     /*background-color: blue;*/
