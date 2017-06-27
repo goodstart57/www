@@ -1,7 +1,27 @@
 @charset "utf-8";
-body{
-    /*background-color: gray;*/
+/* 웹폰트 선언 */
+@font-face {
+    font-family: 'Noto Sans Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+    url('font/eot/NotoSansKR-Regular-Hestia.eot'),
+    url('font/eot/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'),
+    url('font/woff/NotoSansKR-Regular-Hestia.woff') format('woff'),
+    url('font/otf/NotoSansKR-Regular-Hestia.otf') format('opentype');
 }
+@font-face {
+    font-family: 'Noto Sans Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+    url('font/eot/NotoSansKR-Bold-Hestia.eot'),
+    url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'),
+    url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'),
+    url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
+}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
 /* 요소의 여백 초기화 */
 html, body, h1, h2, h3, h4, p{
     margin: 0;
@@ -12,7 +32,10 @@ h1, h2, h3, h4{
     font-size: 3em;
     font-weight: normal;
 }
-
+/* 기본 스타일 */
+body{
+    font-family: 'Noto Sans Regular', sans-serif; /*NotoSansRegular가 인식되지 않으면 sans-serif 글꼴군에서 선택*/
+}
 /* 레이아웃 */
 /* #=id  .=class */
 .wrapper{
@@ -38,7 +61,7 @@ h1, h2, h3, h4{
     height: 115px;
     background-color: #fff;
     /*border-radius: 값; 모서리 라운딩*/
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px 15px 15px 15px;
 
     
     /* 앞 0은 위 아래 , 뒤 50은 양 옆 */
