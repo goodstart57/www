@@ -71,7 +71,7 @@ body {
     background-repeat: no-repeat, repeat; 이미지 반복X, 그라데이션 반복O
     background-position: 50% 10%, 0 0;*/
     /*단축표기법*/
-    background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%) repeat 0 0;
+    background: url(images/bag_image.png) no-repeat 50% 0, linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%) repeat 0 0;
     background-attachment: fixed;
     /*배경을 고정시킨다*/
     padding: 30px 0;
@@ -110,6 +110,7 @@ a {
     min-height: 115px;
     font-family: 'Georgia';
     padding: 0 30px;
+    position: relative;
 }
 
 
@@ -124,8 +125,8 @@ a {
           fixed    : 스크롤을 내려도 화면에 항상 떠있다
           sticky*/
     position: absolute;
-    top: 75px;
-    left: 250px;
+    top: 45px;
+    /*left: 250px;*/
 }
 
 
@@ -191,7 +192,8 @@ a {
 
 .main-menu>li {
     float: left;
-    padding-top: 15px;
+    position: relative;
+    /*padding-top: 15px;*/
 }
 
 
@@ -225,12 +227,29 @@ a {
 
 .main-menu ul {
     list-style-type: none;
-    /*background: lime;*/
     position: absolute;
+    /*background: lime;*/
+    /*강제로 줄바꿈 금지*/
+    white-space: nowrap;
+    top: 50px;
+}
+
+.main-menu ul li {
+    display: inline-block;
+}
+
+.about-html li::before,
+.about-css li::before,
+.web-standards li::before,
+.web-accessibility li::before,
+.qna li::before,
+.archive li::before {
+    content: "· ";
+    padding-left: 10px;
 }
 
 .about-html {
-    display: none;
+    display: block;
 }
 
 .about-css {
@@ -251,6 +270,10 @@ a {
 
 .archive {
     display: none;
+}
+
+.main-menu>li>.about-html:hover {
+    display: block;
 }
 
 .visual {
