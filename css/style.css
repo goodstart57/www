@@ -1,44 +1,64 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
 /* 웹폰트 선언 */
+
 @font-face {
     font-family: 'Noto Sans Regular';
     font-style: normal;
     font-weight: 400;
-    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
-    url('font/eot/NotoSansKR-Regular-Hestia.eot'),
-    url('font/eot/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'),
-    url('font/woff/NotoSansKR-Regular-Hestia.woff') format('woff'),
-    url('font/otf/NotoSansKR-Regular-Hestia.otf') format('opentype');
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'), url('font/eot/NotoSansKR-Regular-Hestia.eot'), url('font/eot/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Regular-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Regular-Hestia.otf') format('opentype');
 }
+
 @font-face {
     font-family: 'Noto Sans Bold';
     font-style: normal;
     font-weight: 700;
-    src: local('Noto Sans Bold'), local('NotoSans-Bold'),
-    url('font/eot/NotoSansKR-Bold-Hestia.eot'),
-    url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'),
-    url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'),
-    url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'), url('font/eot/NotoSansKR-Bold-Hestia.eot'), url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
 }
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
 
 /* 요소의 여백 초기화 */
-html, body, h1, h2, h3, h4, p{
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
+
+
 /* 제목크기 초기화 */
-h1, h2, h3, h4{
+
+h1,
+h2,
+h3,
+h4 {
     font-size: 3em;
     font-weight: normal;
 }
+
+
 /* 기본 스타일 */
-body{
-    font-family: 'Noto Sans Regular', sans-serif; /*NotoSansRegular가 인식되지 않으면 sans-serif 글꼴군에서 선택*/
+
+body {
+    font-family: 'Noto Sans Regular', sans-serif;
+    /*NotoSansRegular가 인식되지 않으면 sans-serif 글꼴군에서 선택*/
 }
+
+
 /* 레이아웃 */
+
+
 /* #=id  .=class */
-.wrapper{
+
+.wrapper {
     /*background-image: linear-gradient(to bottom, #d6d6d6 1%, #ffffff 70%, #ffffff 100%);*/
     /*background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);*/
     /*background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(255,255,255,255) 100%);*/
@@ -46,46 +66,68 @@ body{
     background-repeat: no-repeat, repeat; 이미지 반복X, 그라데이션 반복O
     background-position: 50% 10%, 0 0;*/
     /*단축표기법*/
-    background: url(images/bg_flower.png) no-repeat 50% 0,
-                linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%) repeat 0 0;
-    background-attachment: fixed; /*배경을 고정시킨다*/
+    background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%) repeat 0 0;
+    background-attachment: fixed;
+    /*배경을 고정시킨다*/
     padding: 30px 0;
     /*height: 50vh;*/
 }
-.header, .visual, .main-content, .slogan, .footer{
+
+.header,
+.visual,
+.main-content,
+.slogan,
+.footer {
     width: 940px;
     margin: 0 auto;
 }
-.header{
+
+
+/* 헤더 */
+
+.header {
     /*box-sizing: border-box;*/
-    height: 115px;
     background-color: #fff;
     /*border-radius: 값; 모서리 라운딩*/
-    border-radius: 15px 15px 15px 15px;
-
-    
+    /*border-radius: 15px 15px 15px 15px;*/
     /* 앞 0은 위 아래 , 뒤 50은 양 옆 */
     /*margin: 0 50px;*/
     /* auto 는 남은 면적 계산해서 해줌 */
-    height: 20vh;
+    min-height: 115px;
     font-family: 'Georgia';
 }
 
-.visual{
+
+/* 로고 */
+
+.logo {
+    background: pink;
+    /*레이아웃 배치*/
+    /*pos:static   : default
+          absolute : layer화, 상위 요소를 기준으로 포지션을 정한다
+          relative
+          fixed    : 스크롤을 내려도 화면에 항상 떠있다
+          sticky*/
+    position: absolute;
+    top: 45px;
+    left: 250px;
+}
+
+.visual {
     padding: 30px 0;
     height: 10vh;
     /*이미지설정 : 정의한 순서로 보인다*/
-    
 }
 
-.main-content{
+.main-content {
     background-color: #fff;
     border-radius: 15px 15px 0 0;
     /*height: 400px; 높이를 400으로 고정*/
     min-height: 400px;
     display: flex;
     padding: 30px;
-    box-sizing: border-box; /*box를 넘지 않게한다*/
+    box-sizing: border-box;
+    /*box를 넘지 않게한다*/
     /*justify-content: space-between;*/
     /*flex-direction: __;
       콘텐츠를 가로방향 세로방향
@@ -95,26 +137,32 @@ body{
     /*align-items: flex-start;*/
     /*align-items: 위치; 자식영역에 속하는 것의 위치를 바꾼다*/
 }
-.group{
-}
-.group1{
+
+.group {}
+
+.group1 {
     width: 250px;
     /*align-self: flex-end; 각각 요소의 위치를 설정*/
 }
-.group2{
+
+.group2 {
     width: 380px;
 }
-.group3{
+
+.group3 {
     width: 190px;
     /*order: -1;*/
 }
-.slogan{
+
+.slogan {
     height: 10vh;
 }
-.footer-bg{
-     background-image: linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
+
+.footer-bg {
+    background-image: linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
 }
-.footer{
+
+.footer {
     /*background-color: blue;*/
     height: 10vh;
 }
