@@ -47,9 +47,14 @@ h4 {
 
 /* 기본 스타일 */
 
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: 'Noto Sans Regular', sans-serif;
     /*NotoSansRegular가 인식되지 않으면 sans-serif 글꼴군에서 선택*/
+    font-size: 1.4rem;
 }
 
 
@@ -83,10 +88,18 @@ body {
 }
 
 
+/* 링크스타일 */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
 /* 헤더 */
 
 .header {
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
     background-color: #fff;
     /*border-radius: 값; 모서리 라운딩*/
     /*border-radius: 15px 15px 15px 15px;*/
@@ -95,6 +108,7 @@ body {
     /* auto 는 남은 면적 계산해서 해줌 */
     min-height: 115px;
     font-family: 'Georgia';
+    padding: 0 30px;
 }
 
 
@@ -111,6 +125,52 @@ body {
     position: absolute;
     top: 45px;
     left: 250px;
+}
+
+
+/* 텍스트링크 - 안내링크 */
+
+.info-menu {
+    background: pink;
+    list-style-type: none;
+    font-size: 0;
+    text-align: right;
+    /*text-align: left;   default
+                : right;  오른쪽 정렬
+                : center; 가운데정렬
+      부모가 블록이어야한다.*/
+    right: -10px;
+}
+
+
+/* 클래스 하위의 요소를 불러올때 클래스 선택자 띄우고 요소선택자 */
+
+
+/* 44px은 되어야 성인 남성이 실수로 터치를 못하는 경우가 적다 */
+
+.info-menu li,
+.info-menu a {
+    display: inline-block;
+}
+
+.info-menu li {
+    background: lime;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.info-menu li::after {
+    content: " : ";
+}
+
+.info-menu li:last-child::after {
+    content: "";
+}
+
+.info-menu a {
+    padding: 10px 0;
+    background: yellow;
+    /*block의 성격을 가진 inline*/
 }
 
 .visual {
