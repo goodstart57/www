@@ -232,7 +232,7 @@ a {
     /*background: lime;*/
     /*강제로 줄바꿈 금지*/
     white-space: nowrap;
-    top: 50px;
+    top: 48px;
 }
 
 .main-menu ul li {
@@ -250,7 +250,7 @@ a {
 }
 
 .about-html {
-    display: block;
+    display: none;
 }
 
 .about-css {
