@@ -17,6 +17,13 @@
     src: local('Noto Sans Bold'), local('NotoSans-Bold'), url('font/eot/NotoSansKR-Bold-Hestia.eot'), url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'webcafeIcon';
+    font-weight: 400;
+    src: url('font/webcafeIcon.eot');
+    src: url('font/webcafeIcon.eot?#iefix') format('embedded-opentype'), url('font/webcafeIcon.woff') format('woff'), url('font/webcafeIcon.ttf') format('truetype'), url('font/webcafeIcon.svg#webcaferegular') format('svg');
+}
+
 
 /* 요소의 여백 초기화 */
 
@@ -232,14 +239,14 @@ a {
     display: inline-block;
 }
 
-.about-html li::before,
-.about-css li::before,
-.web-standards li::before,
-.web-accessibility li::before,
-.qna li::before,
-.archive li::before {
-    content: "· ";
-    padding-left: 10px;
+.main-menu ul a::before {
+    font-family: "webcafeIcon";
+    content: "r";
+}
+
+.main-menu ul a:hover::before,
+.main-menu ul a:focus::before {
+    content: "c";
 }
 
 .about-html {
@@ -279,7 +286,7 @@ a {
 
 .main-content {
     /*background: url(images\back_image.png) no-repeat 50% 0, #ffffff;*/
-    background: url("images\back_image.png"), #ffffff;
+    background: url("images/back_image.png") no-repeat, #ffffff;
     border-radius: 20px 5px 5px 20px;
     /*height: 400px; 높이를 400으로 고정*/
     min-height: 800px;

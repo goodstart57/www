@@ -106,7 +106,6 @@ a {
 /* 헤더 */
 
 .header {
-    box-sizing: border-box;
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     /*border-radius: 값; 모서리 라운딩*/
     border: 1px solid #181818;
@@ -114,9 +113,8 @@ a {
     /* 앞 0은 위 아래 , 뒤 50은 양 옆 */
     /*margin: 0 50px;*/
     /* auto 는 남은 면적 계산해서 해줌 */
-    min-height: 115px;
-    font-family: 'Georgia';
-    padding: 0 30px;
+    /*min-height: 115px;*/
+    padding: 0 20px 70px 30px;
     position: relative;
 }
 
@@ -206,7 +204,7 @@ a {
 
 /* 명확한 자식 요소를 선택 */
 
-.main-menu>li>a {
+.main-menu span {
     font-size: 1.8rem;
     font-family: "noto sans bold";
     color: rgba(255, 255, 255, 0.95);
@@ -215,18 +213,21 @@ a {
     /*background: #000;*/
     display: block;
     border-left: 2px solid rgba(255, 255, 255, 0.9);
-    text-shadow: 1px 0px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000, 0px 1px 0 #000;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 
-.main-menu>li>a:hover {
+.main-menu span:hover,
+.main-menu span:focus {
     color: hsla(35, 80%, 80%, 1);
-    /*border-bottom: 2px solid #181818;*/
+    outline: 0;
+    /*탭으로 영역을 지정했을때 점선을 제거*/
 }
 
 
 /* ::after, ::before는 선택된 요소의 형제레벨의 요소를 만들어낸다.*/
 
-.main-menu>li>a:hover::after {
+.main-menu span:hover::after,
+.main-menu span:focus::after {
     content: "";
     display: block;
     border-top: 2px solid #181818;
@@ -260,28 +261,38 @@ a {
     content: "c";
 }
 
-.about-html {
+.main-menu ul a {
+    padding: 8px 15px 7px 0;
     display: block;
+}
+
+.about-html {
+    display: none;
 }
 
 .about-css {
     display: none;
+    left: 0;
 }
 
 .web-standards {
     display: none;
+    left: 0;
 }
 
 .web-accessibility {
     display: none;
+    left: -170px;
 }
 
 .qna {
     display: none;
+    left: -195px;
 }
 
 .archive {
     display: none;
+    right: 0;
 }
 
 .main-menu>li>.about-html:hover {
