@@ -57,6 +57,11 @@ body {
     font-size: 1.4rem;
 }
 
+body>div {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
 
 /* 레이아웃 */
 
@@ -64,14 +69,8 @@ body {
 /* #=id  .=class */
 
 .wrapper {
-    /*background-image: linear-gradient(to bottom, #d6d6d6 1%, #ffffff 70%, #ffffff 100%);*/
-    /*background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);*/
-    /*background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(255,255,255,255) 100%);*/
-    /*background-image: url(images/bg_flower.png), linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
-    background-repeat: no-repeat, repeat; 이미지 반복X, 그라데이션 반복O
-    background-position: 50% 10%, 0 0;*/
     /*단축표기법*/
-    background: url(images/bag_image.png) no-repeat 50% 0, linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%) repeat 0 0;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%) repeat 0 0;
     background-attachment: fixed;
     /*배경을 고정시킨다*/
     padding: 30px 0;
@@ -117,7 +116,6 @@ a {
 /* 로고 */
 
 .logo {
-    /*background: linear-gradient(#a6c1ee, #fee2ff);*/
     /*레이아웃 배치*/
     /*pos:static   : default
           absolute : layer화, 상위 요소를 기준으로 포지션을 정한다
@@ -171,8 +169,6 @@ a {
 
 .info-menu a {
     padding: 10px 0;
-    /*background: yellow;*/
-    /*block의 성격을 가진 inline*/
 }
 
 
@@ -205,7 +201,6 @@ a {
     color: rgba(255, 255, 255, 0.95);
     padding: 0 15px;
     line-height: 45px;
-    /*background: #000;*/
     display: block;
     border-left: 2px solid rgba(255, 255, 255, 0.9);
     text-shadow: 1px 0px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000, 0px 1px 0 #000;
@@ -213,7 +208,6 @@ a {
 
 .main-menu>li>a:hover {
     color: hsla(35, 80%, 80%, 1);
-    /*border-bottom: 2px solid #181818;*/
 }
 
 
@@ -284,10 +278,11 @@ a {
 }
 
 .main-content {
-    background-color: #fff;
-    border-radius: 15px 15px 0 0;
+    /*background: url(images\back_image.png) no-repeat 50% 0, #ffffff;*/
+    background: url("images\back_image.png"), #ffffff;
+    border-radius: 20px 5px 5px 20px;
     /*height: 400px; 높이를 400으로 고정*/
-    min-height: 400px;
+    min-height: 800px;
     display: flex;
     padding: 30px;
     box-sizing: border-box;
@@ -300,22 +295,36 @@ a {
     justify-content: space-between;
     /*align-items: flex-start;*/
     /*align-items: 위치; 자식영역에 속하는 것의 위치를 바꾼다*/
+    border: 1px solid #181818;
 }
 
 .group {}
 
 .group1 {
-    width: 250px;
+    border: 5px solid hsla(190, 80%, 80%, 1);
+    border-radius: 15px;
+    width: 150px;
     /*align-self: flex-end; 각각 요소의 위치를 설정*/
 }
 
 .group2 {
-    width: 380px;
+    border: 5px solid hsla(190, 80%, 80%, 1);
+    border-radius: 15px;
+    width: 480px;
 }
 
 .group3 {
+    border: 5px solid hsla(190, 80%, 80%, 1);
+    border-radius: 15px;
     width: 190px;
     /*order: -1;*/
+}
+
+.group a {
+    padding-left: 10px;
+    text-align: center;
+    width: 40%;
+    font-size: 1.8rem;
 }
 
 .slogan {
