@@ -299,11 +299,39 @@ a {
     display: block;
 }
 
+@keyframes text-ani {
+    0% {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 75px);
+    }
+}
+
 .visual {
     /*padding: 30px 0;*/
-    padding: 25px 0;
-    height: 10vh;
+    height: 120px;
     /*이미지설정 : 정의한 순서로 보인다*/
+}
+
+.visual-text {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0);
+    /*opacity: rgba(0, 0, 0, 0);*/
+    /*animation-fill-mode: backwards = 0%에서 멈춘다.
+                         : forwards  = 100%에서 멈춘다*/
+    /*animation-timing-function : linear/ease-in/ease-out/ease-in-out/cubicbezier;*/
+    /*animation-iteration-count: n; 애니메이션을 n회 반복실행한다
+                               : infinite; 무한반복*/
+    /*animation-direction : alternate; 순방향 - 역방향순으로 애니메이트
+                          : alternate-revese; 역방향 - 순방향순으로 애니메이트*/
+    animation: text-ani 0.2s forwards ease-in-out;
+    /*animation : ani-name duration fill-mode delay function count direction*/
 }
 
 .main-content {

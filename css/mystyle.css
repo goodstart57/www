@@ -64,10 +64,11 @@ body {
     font-size: 1.4rem;
 }
 
-body>div {
+
+/*body>div {
     box-sizing: border-box;
     padding: 10px;
-}
+}*/
 
 
 /* 레이아웃 */
@@ -279,9 +280,18 @@ a {
 
 .visual {
     /*padding: 30px 0;*/
-    padding: 25px 0;
-    height: 10vh;
+    height: 140px;
     /*이미지설정 : 정의한 순서로 보인다*/
+}
+
+.visual-text {
+    display: inline-block;
+    background: yellow;
+    animation-name: text-ani;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    /*animation-fill-mode: backwards = 0%에서 멈춘다.
+                         : forwards  = 100%에서 멈춘다*/
 }
 
 .main-content {
