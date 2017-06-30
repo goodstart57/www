@@ -25,6 +25,15 @@
 }
 
 
+/* 숨김 콘텐츠*/
+
+legend {
+    /*display: none; 아에 쓸수 없어서 위험하다*/
+    position: absolute;
+    left: -9999em;
+}
+
+
 /* 요소의 여백 초기화 */
 
 html,
@@ -391,7 +400,7 @@ a {
 .group {}
 
 .group1 {
-    width: 250px;
+    width: 280px;
     /*align-self: flex-end; 각각 요소의 위치를 설정*/
 }
 
@@ -404,8 +413,82 @@ a {
     /*order: -1;*/
 }
 
+
+/* 로그인 */
+
+.login {
+    background: radial-gradient(circle at right top, #e5892d, #e0652c);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    /*box-shadow: X Y Blur 두께 색*/
+}
+
+.login-heading {
+    font-family: "Noto Sans Bold", sans-serif;
+    font-size: 3rem;
+    color: #ff0;
+    text-indent: 10px;
+    /*text-indent: n; n만큼 들여쓰기한다*/
+}
+
+.login-form {
+    background: #fff;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+}
+
+.login-form fieldset {
+    /*숨기기*/
+    border: 0;
+    border-bottom: 1px solid #aaa;
+    padding: 0 0 10px 0;
+    margin: 0;
+    position: relative;
+}
+
+.login-form label {
+    display: inline-block;
+    width: 4.5em;
+    /*inline-block과 width로 id, pw 너비 똑같이 만들기*/
+    cursor: pointer;
+}
+
+.user-pw {
+    margin-top: 5px;
+}
+
+.login-form input {
+    box-sizing: border-box;
+    width: 95px;
+    height: 22px;
+    border: 1px solid #aaa;
+    padding: 1px 1px 1px 5px;
+}
+
+.btn-login {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    padding: 0 5px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 175px;
+}
+
 .slogan {
     height: 10vh;
+}
+
+.member {
+    padding: 0 10px 10px 10px;
+    background: white;
+    border-radius: 0 0 5px 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-bg {
