@@ -30,7 +30,6 @@ $(function() {
 ```
 <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/markdown-512.png" width="150px" align="right">
 
-<br>
 
 | 구분 | 영어 | 수학 |
 |:---:|-----:|----:|
