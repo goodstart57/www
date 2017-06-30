@@ -8,7 +8,7 @@
 
 <body>
     <style>
-    .container {
+        .container {
             border: 1px solid #666;
             height: 100px;
             padding: 10px;
@@ -34,18 +34,26 @@
         
         .box3:hover {
             transform: scale(1.2);
+            transform-origin: 0 0;
+            /*transform-origin: X% Y% 어디서부터 크기가 커질지 결정*/
         }
         
         .box4:hover {
             transform: rotate(45deg);
+            transform-origin: -100% 0%;
         }
-    }
     </style>
 
     <div class="container">
         <div class="box box1"></div>
+    </div>
+    <div class="container">
         <div class="box box2"></div>
+    </div>
+    <div class="container">
         <div class="box box3"></div>
+    </div>
+    <div class="container">
         <div class="box box4"></div>
     </div>
 </body>
