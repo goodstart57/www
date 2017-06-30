@@ -13,6 +13,7 @@
             height: 260px;
             position: relative;
             perspective: 800px;
+            background: url("../images/")
         }
         
         #card {
@@ -35,37 +36,53 @@
             font-size: 50px;
             color: white;
             text-align: center;
-            padding: 40px 0 0 0;
             white-space: hidden;
         }
         
         .front {
-            background: red;
+            /*background: red;*/
         }
         
         .back {
-            background: blue;
+            /*background: blue;*/
             transform: rotateY( 180deg);
         }
         
         #card.flipped {
             transform: rotateY( 180deg);
         }
+        
+        .btn {
+            margin: 50px 0 0 0;
+        }
     </style>
 
     <div class="container">
         <div id="card">
-            <div class="front">Front</div>
-            <div class="back">Back</div>
+            <!--<div class="front">Front</div>-->
+            <img class="front" src="http://media.istockphoto.com/vectors/playing-card-back-side-vector-id494411624" alt="">
+            <!--<div class="back">Back</div>-->
+            <img class="back" src="http://www.madore.org/~david/images/cards/english/king-spades.png" alt="Back">
         </div>
     </div>
+    <button class="btn">Click Me!</button>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>
+        $(function() {
+            $(".btn").on("click", function() {
+                $("#card").toggleClass("flipped");
+            });
+        });
         $(function() {
             $("#card").click(function() {
                 $(this).toggleClass("flipped");
             });
         });
+        // $(function() {
+        //     $("#card").click(function() {
+        //         $(this).toggleClass("flipped");
+        //     });
+        // });
     </script>
 </body>
 
