@@ -73,6 +73,7 @@ body {
     font-family: 'Noto Sans Regular', sans-serif;
     /*NotoSansRegular가 인식되지 않으면 sans-serif 글꼴군에서 선택*/
     font-size: 1.4rem;
+    line-height: 1.15;
 }
 
 
@@ -486,6 +487,108 @@ a {
 .validation-list a {
     display: block;
 }*/
+
+
+/* 웹 관련 용어 */
+
+.term {
+    background: linear-gradient(to bottom, #eee, #ccc);
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.term-heading {
+    font-size: 1.6rem;
+    font-family: "Noto Sans Bold";
+}
+
+.term-list {
+    margin: 10px 0 0 0;
+}
+
+.term-list::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.term-list-subject,
+.term-list-brief {
+    float: right;
+    width: 200px;
+}
+
+.term-list-subject {
+    color: #246cb5;
+    font-family: "Noto Sans Bold";
+}
+
+.term-list-brief {
+    margin-top: 5px !important;
+}
+
+.term-list-thumbnail {
+    float: left;
+}
+
+.term-list-thumbnail,
+.term-list-brief {
+    margin: 0;
+}
+
+
+/* 내가 짠 코드 */
+
+
+/*
+.term,
+.term-heading,
+.term-list,
+.term-list-subject,
+.term-list-thumbnail {
+    margin: 0px;
+}
+
+.term {
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+.term-heading,
+.term-list-subject {
+    font-family: "Noto Sans Bold", sans-serif;
+    font-size: 1.5rem;
+}
+
+.term-list-subject {
+    color: #246cb5;
+    display: inline-block;
+    padding-top: 7px;
+}
+
+.term-list-thumbnail {
+    display: block;
+    float: left;
+    margin: 15px 15px 15px 0;
+}
+
+.term-list-brief {
+    font-size: 1.5rem;
+    display: block;
+}*/
+
+.even .term-list-thumbnail {
+    float: right;
+}
+
+.even .term-list-subject,
+.even .term-list-brief {
+    float: left;
+}
 
 .slogan {
     height: 10vh;
