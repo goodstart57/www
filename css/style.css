@@ -28,7 +28,8 @@
 
 /* 숨김 콘텐츠*/
 
-legend {
+legend,
+.hidden {
     /*display: none; 아에 쓸수 없어서 위험하다*/
     position: absolute;
     left: -9999em;
@@ -401,7 +402,7 @@ a {
 .group {}
 
 .group1 {
-    width: 260px;
+    width: 300px;
     /*align-self: flex-end; 각각 요소의 위치를 설정*/
 }
 
@@ -449,6 +450,45 @@ a {
 
 .find {
     float: right;
+}
+
+.validation {
+    margin-top: 20px;
+}
+
+.validation-list {
+    list-style-type: none;
+}
+
+.validation-list a {
+    background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #eee, #ccc);
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    padding-left: 40px;
+}
+
+
+/*.validation-list li {
+    background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 40px;
+    list-style-type: none;
+}
+
+.validation-list a {
+    display: block;
+}*/
+
+.slogan {
+    height: 10vh;
 }
 
 .footer-bg {
