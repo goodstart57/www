@@ -403,7 +403,7 @@ a {
 .group {}
 
 .group1 {
-    width: 300px;
+    width: 280px;
     /*align-self: flex-end; 각각 요소의 위치를 설정*/
 }
 
@@ -517,7 +517,7 @@ a {
 .term-list-subject,
 .term-list-brief {
     float: right;
-    width: 200px;
+    width: 180px;
 }
 
 .term-list-subject {
@@ -603,6 +603,9 @@ a {
     height: 10vh;
 }
 
+
+/* 로그인 */
+
 .login {
     background: radial-gradient(circle at right top, #e5892d, #e0652c);
     padding: 8px;
@@ -669,4 +672,34 @@ a {
     background: hsla(0, 100%, 70%, 1);
     border-radius: 3px;
     font-size: 1em;
+}
+
+
+/* 자료검색 창 */
+
+.search {
+    background: linear-gradient(to bottom, #aaa 0%, #fff 100%);
+    padding: 10px 0;
+    border-top: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    border-radius: 10px 10px 0 0;
+    font-size: 1.6rem;
+}
+
+.search li {
+    background: none;
+    border: none;
+    margin-left: 10px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.search input {
+    width: 200px;
+    margin: 0 10px;
+}
+
+.btn-search {
+    line-height: 20px;
 }
