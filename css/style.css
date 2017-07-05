@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import "fontello.css";
 
 /* 웹폰트 선언 */
 
@@ -56,7 +57,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: normal;
 }
 
@@ -400,7 +401,7 @@ a {
 .group {}
 
 .group1 {
-    width: 280px;
+    width: 260px;
     /*align-self: flex-end; 각각 요소의 위치를 설정*/
 }
 
@@ -416,17 +417,60 @@ a {
 
 /* 로그인 */
 
+.slogan {
+    height: 10vh;
+}
+
+.member {
+    padding: 0 10px 10px 10px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+
+.member::after {
+    content: "";
+    display: block;
+    clear: both;
+    /*float때문에 일어난 높이 문제를 해결해준다*/
+}
+
+.icon-user::before,
+.icon-right-open::before {
+    color: #f00;
+}
+
+.join {
+    float: left;
+}
+
+.find {
+    float: right;
+}
+
+.footer-bg {
+    background-image: linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
+}
+
+.footer {
+    /*background-color: blue;*/
+    height: 10vh;
+}
+
 .login {
     background: radial-gradient(circle at right top, #e5892d, #e0652c);
-    padding: 10px;
-    border-radius: 10px;
+    padding: 8px;
+    border-radius: 5px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
     /*box-shadow: X Y Blur 두께 색*/
 }
 
 .login-heading {
     font-family: "Noto Sans Bold", sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #ff0;
     text-indent: 10px;
     /*text-indent: n; n만큼 들여쓰기한다*/
@@ -434,29 +478,30 @@ a {
 
 .login-form {
     background: #fff;
-    margin-top: 10px;
+    margin-top: 5px;
     border-radius: 5px 5px 0 0;
     padding: 10px;
+    cursor: pointer;
 }
 
 .login-form fieldset {
     /*숨기기*/
     border: 0;
     border-bottom: 1px solid #aaa;
-    padding: 0 0 10px 0;
+    padding-bottom: 10px;
     margin: 0;
     position: relative;
 }
 
 .login-form label {
     display: inline-block;
-    width: 4.5em;
+    width: 4em;
     /*inline-block과 width로 id, pw 너비 똑같이 만들기*/
     cursor: pointer;
 }
 
 .user-pw {
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .login-form input {
@@ -468,34 +513,17 @@ a {
 }
 
 .btn-login {
-    width: 50px;
+    width: 55px;
     height: 50px;
     border: 0;
-    padding: 0 5px;
+    padding: 0 3px;
     position: absolute;
-    top: 0;
+    top: 5px;
     bottom: 0;
-    left: 175px;
-}
-
-.slogan {
-    height: 10vh;
-}
-
-.member {
-    padding: 0 10px 10px 10px;
-    background: white;
-    border-radius: 0 0 5px 5px;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-bg {
-    background-image: linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
-}
-
-.footer {
-    /*background-color: blue;*/
-    height: 10vh;
+    left: 170px;
+    color: white;
+    cursor: pointer;
+    background: hsla(0, 100%, 70%, 1);
+    border-radius: 3px;
+    font-size: 1em;
 }
