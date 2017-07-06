@@ -76,6 +76,15 @@ body {
     line-height: 1.15;
 }
 
+input,
+textarea,
+select,
+option,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 
 /* 레이아웃 */
 
@@ -678,13 +687,71 @@ a {
 /* 자료검색 창 */
 
 .search {
-    background: linear-gradient(to bottom, #aaa 0%, #fff 100%);
-    padding: 10px 0;
+    background: linear-gradient(to bottom, #ccc, #fff);
     border-top: 1px solid #aaa;
     border-left: 1px solid #aaa;
     border-right: 1px solid #aaa;
-    border-radius: 10px 10px 0 0;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 5px 25px;
+}
+
+.search-form fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.search-form label::before {
+    content: "z";
+    font-family: "webcafeIcon";
+    position: relative;
+    top: 3px;
+}
+
+.search-form input {
+    width: 195px;
+    height: 22px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 5px;
+    margin: 0 5px 0 5px;
+}
+
+.btn-search {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 0 10px;
+    height: 24px;
+    background: linear-gradient(to bottom, #666, #ccc);
+    color: #fff;
+}
+
+
+/* MY. 자료검색 창 */
+
+
+/*.search {
+    font-family: inherit;
+}
+
+.search-form fieldset {
+    background: linear-gradient(to bottom, #aaa 0%, #fff 100%);
+    padding: 15px 5px 20px 20px;
     font-size: 1.6rem;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #aaa;
+    border-bottom: none;
+}
+
+.search-form label::before {
+    font-family: "webcafeIcon";
+    content: "z ";
+    position: relative;
+    top: 2px;
+}
+
+.search-form label {
+    font-size: 1.5rem;
 }
 
 .search li {
@@ -697,9 +764,14 @@ a {
 
 .search input {
     width: 200px;
+    height: 28px;
     margin: 0 10px;
 }
 
 .btn-search {
-    line-height: 20px;
-}
+    background: linear-gradient(to bottom, #181818, #888);
+    line-height: 28px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    color: white;
+}*/
