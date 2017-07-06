@@ -326,10 +326,20 @@ a {
         color: rgba(0, 0, 0, 0);
         transform: translate(0, 75px);
     }
+    25% {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.25);
+        transform: translate(100px, 0);
+    }
     50% {
         font-size: 18px;
         color: rgba(0, 0, 0, 0.5);
-        transform: translate(200px, 0);
+        transform: translate(200px, 75px);
+    }
+    75% {
+        font-size: 21px;
+        color: rgba(0, 0, 0, 0.75);
+        transform: translate(300px, 0);
     }
     100% {
         font-size: 24px;
@@ -357,7 +367,7 @@ a {
 
 .visual::before {
     background: url(images/ani_flower_01.png) no-repeat 0px 0, url(images/ani_flower_02.png) no-repeat 670px 0;
-    animation: flower-ani 2s forwards ease-in-out infinite;
+    animation: flower-ani 2s forwards ease-in-out infinite alternate;
 }
 
 .visual::after {
@@ -386,7 +396,7 @@ a {
                                : infinite; 무한반복*/
     /*animation-direction : alternate; 순방향 - 역방향순으로 애니메이트
                           : alternate-revese; 역방향 - 순방향순으로 애니메이트*/
-    animation: text-ani 1s forwards ease-in-out;
+    animation: text-ani 4s forwards ease-in-out;
     /*animation : ani-name duration fill-mode delay function count direction*/
 }
 
