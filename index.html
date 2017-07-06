@@ -154,16 +154,17 @@
             <div class="group group2">
                 <div class="search">
                     <h2 class="search-heading hidden">검색</h2>
-                    <form class="search-form">
-                        <legend>검색 폼</legend>
-                        <label class="search">자료검색 </li>
-                        <input type="search" id="search" required placeholder="검색어를 입력하세요.">
-                        <button class="btn-search">검색</button>
+                    <form action="javascript:alert('검색이 완료되었습니다.');" class="search-form">
+                        <fieldset>
+                            <legend>검색 폼</legend>
+                            <label for="search">자료검색</label>
+                            <input type="search" id="search" class="keyword" required placeholder="검색어를 입력하세요.">
+                            <button type="submit" class="btn-search">검색</button>
+                        </fieldset>
                     </form>
                 </div>
-
             </div>
-            <div class="group group3"></div>
+            <div> class="group group3"></div>
         </main>
         <!-- 아티클 영역은 제목을 정해줘야한다. -->
         <article class="slogan">슬로건</article>
