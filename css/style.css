@@ -96,8 +96,8 @@ button {
     /*background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);*/
     /*background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(255,255,255,255) 100%);*/
     /*background-image: url(images/bg_flower.png), linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
-    background-repeat: no-repeat, repeat; 이미지 반복X, 그라데이션 반복O
-    background-position: 50% 10%, 0 0;*/
+background-repeat: no-repeat, repeat; 이미지 반복X, 그라데이션 반복O
+background-position: 50% 10%, 0 0;*/
     /*단축표기법*/
     background: url(images/bag_image.png) no-repeat 50% 0, linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%) repeat 0 0;
     background-attachment: fixed;
@@ -146,10 +146,10 @@ a {
     /*background: linear-gradient(#a6c1ee, #fee2ff);*/
     /*레이아웃 배치*/
     /*pos:static   : default
-          absolute : layer화, 상위 요소를 기준으로 포지션을 정한다
-          relative
-          fixed    : 스크롤을 내려도 화면에 항상 떠있다
-          sticky*/
+        absolute : layer화, 상위 요소를 기준으로 포지션을 정한다
+        relative
+        fixed    : 스크롤을 내려도 화면에 항상 떠있다
+        sticky*/
     position: absolute;
     top: 45px;
     left: 50px;
@@ -164,9 +164,9 @@ a {
     font-size: 0;
     text-align: right;
     /*text-align: left;   default
-                : right;  오른쪽 정렬
-                : center; 가운데정렬
-      부모가 블록이어야한다.*/
+            : right;  오른쪽 정렬
+            : center; 가운데정렬
+    부모가 블록이어야한다.*/
     right: -10px;
 }
 
@@ -390,12 +390,12 @@ a {
     color: rgba(0, 0, 0, 0);
     /*opacity: rgba(0, 0, 0, 0);*/
     /*animation-fill-mode: backwards = 0%에서 멈춘다.
-                         : forwards  = 100%에서 멈춘다*/
+                        : forwards  = 100%에서 멈춘다*/
     /*animation-timing-function : linear/ease-in/ease-out/ease-in-out/cubic-bezier;*/
     /*animation-iteration-count: n; 애니메이션을 n회 반복실행한다
-                               : infinite; 무한반복*/
+                            : infinite; 무한반복*/
     /*animation-direction : alternate; 순방향 - 역방향순으로 애니메이트
-                          : alternate-revese; 역방향 - 순방향순으로 애니메이트*/
+                        : alternate-revese; 역방향 - 순방향순으로 애니메이트*/
     animation: text-ani 4s forwards ease-in-out;
     /*animation : ani-name duration fill-mode delay function count direction*/
 }
@@ -411,8 +411,8 @@ a {
     /*box를 넘지 않게한다*/
     /*justify-content: space-between;*/
     /*flex-direction: __;
-      콘텐츠를 가로방향 세로방향
-      배치를 정해준다 디폴트는 row*/
+    콘텐츠를 가로방향 세로방향
+    배치를 정해준다 디폴트는 row*/
     flex-direction: row;
     justify-content: space-between;
     /*align-items: flex-start;*/
@@ -493,18 +493,18 @@ a {
 
 
 /*.validation-list li {
-    background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #eee, #ccc);
-    border: 1px solid #aaa;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    height: 30px;
-    line-height: 30px;
-    text-indent: 40px;
-    list-style-type: none;
+background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #eee, #ccc);
+border: 1px solid #aaa;
+border-radius: 20px;
+margin-bottom: 10px;
+height: 30px;
+line-height: 30px;
+text-indent: 40px;
+list-style-type: none;
 }
 
 .validation-list a {
-    display: block;
+display: block;
 }*/
 
 
@@ -567,37 +567,37 @@ a {
 .term-list,
 .term-list-subject,
 .term-list-thumbnail {
-    margin: 0px;
+margin: 0px;
 }
 
 .term {
-    background: linear-gradient(to bottom, #eee, #ccc);
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    padding: 15px 20px;
+background: linear-gradient(to bottom, #eee, #ccc);
+border: 1px solid #aaa;
+border-radius: 5px;
+padding: 15px 20px;
 }
 
 .term-heading,
 .term-list-subject {
-    font-family: "Noto Sans Bold", sans-serif;
-    font-size: 1.5rem;
+font-family: "Noto Sans Bold", sans-serif;
+font-size: 1.5rem;
 }
 
 .term-list-subject {
-    color: #246cb5;
-    display: inline-block;
-    padding-top: 7px;
+color: #246cb5;
+display: inline-block;
+padding-top: 7px;
 }
 
 .term-list-thumbnail {
-    display: block;
-    float: left;
-    margin: 15px 15px 15px 0;
+display: block;
+float: left;
+margin: 15px 15px 15px 0;
 }
 
 .term-list-brief {
-    font-size: 1.5rem;
-    display: block;
+font-size: 1.5rem;
+display: block;
 }*/
 
 .even .term-list-thumbnail {
@@ -741,47 +741,182 @@ a {
 
 
 /*.search {
-    font-family: inherit;
+font-family: inherit;
 }
 
 .search-form fieldset {
-    background: linear-gradient(to bottom, #aaa 0%, #fff 100%);
-    padding: 15px 5px 20px 20px;
-    font-size: 1.6rem;
-    border-radius: 10px 10px 0 0;
-    border: 1px solid #aaa;
-    border-bottom: none;
+background: linear-gradient(to bottom, #aaa 0%, #fff 100%);
+padding: 15px 5px 20px 20px;
+font-size: 1.6rem;
+border-radius: 10px 10px 0 0;
+border: 1px solid #aaa;
+border-bottom: none;
 }
 
 .search-form label::before {
+font-family: "webcafeIcon";
+content: "z ";
+position: relative;
+top: 2px;
+}
+
+.search-form label {
+font-size: 1.5rem;
+}
+
+.search li {
+background: none;
+border: none;
+margin-left: 10px;
+list-style-type: none;
+display: inline-block;
+}
+
+.search input {
+width: 200px;
+height: 28px;
+margin: 0 10px;
+}
+
+.btn-search {
+background: linear-gradient(to bottom, #181818, #888);
+line-height: 28px;
+border: 1px solid #aaa;
+border-radius: 5px;
+color: white;
+}*/
+
+
+/* 공지사항 and 자료실 */
+
+.board {
+    margin-top: 20px;
+    position: relative;
+    height: 180px;
+}
+
+.notice-list,
+.pds-list {
+    list-style-type: square;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    padding-left: 20px;
+}
+
+.notice-list li,
+.pds-list li {
+    margin: 5px 0;
+}
+
+.notice-list a,
+.pds-list a {
+    float: left;
+    width: 285px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notice-list time,
+.pds-list time {
+    float: right;
+}
+
+.notice-more,
+.pds-more {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    padding: 8px;
+}
+
+.notice-more::before,
+.pds-more::before {
     font-family: "webcafeIcon";
-    content: "z ";
+    content: "p";
+    color: hsla(120, 100%, 30%, 1);
     position: relative;
     top: 2px;
 }
 
-.search-form label {
-    font-size: 1.5rem;
+.notice-list,
+.pds-list,
+.notice-more,
+.pds-more {
+    display: none;
 }
 
-.search li {
-    background: none;
-    border: none;
-    margin-left: 10px;
-    list-style-type: none;
+.act .notice-list,
+.act .pds-list,
+.act .notice-more,
+.act .pds-more {
+    display: block;
+}
+
+.notice-heading,
+.pds-heading {
+    font-size: 1.5rem;
+    float: left;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    color: #999;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.act .notice-heading,
+.act .pds-heading {
+    border-color: #e0652c;
+    border-bottom-color: #fff;
+    background: #fff;
+    color: #e0652c;
+    outline: 0;
+}
+
+
+/* My.공지사항 and 자료실 */
+
+
+/*    .board {
+    padding: 0;
+    margin: 0;
+}
+
+.notice-heading,
+.pds-heading {
+    font-family: "Noto sans Regular";
+    font-size: 1.4rem;
+    padding: 7px 10px;
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(to bottom, #eee, #ccc);
     display: inline-block;
 }
 
-.search input {
-    width: 200px;
-    height: 28px;
-    margin: 0 10px;
+.board li {
+    list-style-type: none;
+    width: 360px;
 }
 
-.btn-search {
-    background: linear-gradient(to bottom, #181818, #888);
-    line-height: 28px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    color: white;
+.board li::before {
+    font-family: "webcafeIcon";
+    content: "r";
+    top: 2px;
+}
+
+.board a {
+    background: yellow;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.board time {
+    float: right;
+    text-align: right;
 }*/

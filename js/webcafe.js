@@ -18,6 +18,11 @@ $(function() {
             $(this).parent().parent("ul").css("display", "none");
         }
     );
+
+    // 탭메뉴 제어를 위한 자바스크립트
+    $(".board h2").focus(function() {
+        $(this).parent().addClass("act").siblings().removeClass("act");
+    });
 });
 
 //2017-06-29 15:04
