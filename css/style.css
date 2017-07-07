@@ -1143,11 +1143,17 @@ color: white;
     transition: all 0.5s;
 }
 
-.related-list:focus,
-.related-list:hover {
+.list-act {
     height: 125px;
     padding: 5px 0;
 }
+
+
+/*.related-list:focus,
+.related-list:hover {
+    height: 125px;
+    padding: 5px 0;
+}*/
 
 .related-list a {
     display: block;
@@ -1229,6 +1235,98 @@ height: 10vh;
 
 }
 */
+
+
+/* 인기사이트 */
+
+.favorite {
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.favorite-heading {
+    font-size: 2rem;
+}
+
+.favorite-list {
+    padding: 0;
+    margin: 10px 0 0 0;
+    overflow: hidden;
+}
+
+
+/*.no1::before {
+    content: "1";
+}
+
+.no2::before {
+    content: "2";
+}
+
+.no3::before {
+    content: "3";
+}
+
+.no4::before {
+    content: "4";
+}*/
+
+.favorite-list li {
+    counter-increment: number;
+    position: relative;
+}
+
+.favorite-list li::before {
+    content: counter(number, decimal);
+    background: #999;
+    border-radius: 2px;
+    padding: 0 5px;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.up,
+.down,
+.stop {
+    background: url("images/rank.png") no-repeat;
+    font-style: normal;
+    width: 9px;
+    height: 0;
+    padding-top: 11px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.stop {
+    background-position: 0 50%;
+}
+
+.down {
+    background-position: 0 100%;
+}
+
+.favorite-more {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 8px;
+}
+
+.favorite-more::before {
+    content: "p";
+    font-family: "webcafeIcon";
+    color: hsla(120, 100%, 30%, 1);
+    position: relative;
+    top: 2px;
+}
 
 .slogan {
     height: 10vh;
